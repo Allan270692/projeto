@@ -10,8 +10,7 @@ tabela_aids = pd.read_csv("dados_aids_hiv.csv")  #foi criado um arquivo csv com 
 
 tabela_aids.dropna() #aqui é para retirar os dados nulos do arquivo
 
-
-cnv = canvas.Canvas("tabela_aids.pdf", pagesize=A4)
+cnv = canvas.Canvas("tabela_aids.pdf", pagesize=A4) #começo da criação do pdf
 
 cnv.save()
 
