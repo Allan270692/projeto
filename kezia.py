@@ -9,9 +9,11 @@ df = pd.read_excel("dados_aids_hiv_excel_1.xlsx")  #foi criado um arquivo excel 
 df = df.dropna()
 df = df.drop_duplicates()  #limpeza de dados geral 
 
-cnv = canvas.Canvas("grafico_aids.pdf", pagesize=A4) #começo da criação do pdf
+def mm_to_p(mm):
+    return mm / 0.352777
 
-cnv.save()
+pdf= canvas.Canvas("grafico_aids.pdf", pagesize=A4) #começo da criação do pdf
 
-
-#1 = sim, 0 = não
+pdf.setFont('Helvetica-Oblique', 18)
+pdf.drawString(mm_to_p(40),mm_to_p(80), "Olá mundo!")
+pdf.save()
