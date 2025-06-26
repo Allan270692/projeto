@@ -14,6 +14,7 @@ def mm_to_p(mm):
 
 pdf= canvas.Canvas("grafico_aids.pdf", pagesize=A4) #começo da criação do pdf
 
-pdf.setFont('Helvetica-Oblique', 18)
+pdf.setFont('Helvetica-Oblique', 18) 
 pdf.drawString(mm_to_p(40),mm_to_p(80), "Olá mundo!")
 pdf.save()
+
